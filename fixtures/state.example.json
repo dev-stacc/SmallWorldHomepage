@@ -1,0 +1,764 @@
+{
+    "ready": true,
+    "apps": [
+        {
+            "name": "metrics",
+            "group": "monitoring",
+            "role": "metrics",
+            "url": "https://metrics.example.net/",
+            "label": "metrics.example.net",
+            "auth": true,
+            "nav": true,
+            "alert": true,
+            "up": true,
+            "code": 200,
+            "ms": 41.2
+        },
+        {
+            "name": "sso",
+            "group": "identity",
+            "role": "login",
+            "url": "https://sso.example.net/",
+            "label": "sso.example.net",
+            "auth": false,
+            "nav": true,
+            "alert": true,
+            "up": true,
+            "code": 200,
+            "ms": 88.7
+        },
+        {
+            "name": "secrets",
+            "group": "identity",
+            "role": "secrets",
+            "url": "https://secrets.example.net/",
+            "label": "secrets.example.net",
+            "auth": false,
+            "nav": true,
+            "alert": true,
+            "up": true,
+            "code": 200,
+            "ms": 12.4
+        },
+        {
+            "name": "files",
+            "group": "identity",
+            "role": "storage",
+            "url": "https://files.example.net/",
+            "label": "files.example.net",
+            "auth": false,
+            "nav": true,
+            "alert": true,
+            "up": false,
+            "code": 503,
+            "ms": null,
+            "error": "HTTPError"
+        },
+        {
+            "name": "photos",
+            "group": "identity",
+            "role": "photos",
+            "url": "https://photos.example.net/",
+            "label": "photos.example.net",
+            "auth": false,
+            "nav": true,
+            "alert": true,
+            "up": true,
+            "code": 200,
+            "ms": 134.9
+        },
+        {
+            "name": "search",
+            "group": "comfort",
+            "role": "search",
+            "url": "https://search.example.net/",
+            "label": "search.example.net",
+            "auth": false,
+            "nav": true,
+            "alert": true,
+            "up": true,
+            "code": 200,
+            "ms": 22.1
+        },
+        {
+            "name": "git",
+            "group": "comfort",
+            "role": "git",
+            "url": "https://git.example.net/",
+            "label": "git.example.net",
+            "auth": false,
+            "nav": true,
+            "alert": true,
+            "up": true,
+            "code": 200,
+            "ms": 57.6
+        },
+        {
+            "name": "dns",
+            "group": "comfort",
+            "role": "dns",
+            "url": "https://dns.example.net/admin",
+            "label": "dns.example.net/admin",
+            "auth": false,
+            "nav": true,
+            "alert": true,
+            "up": true,
+            "code": 200,
+            "ms": 6.8
+        },
+        {
+            "name": "media",
+            "group": "comfort",
+            "role": "streaming",
+            "url": "https://media.example.net/",
+            "label": "media.example.net",
+            "auth": true,
+            "nav": true,
+            "alert": true,
+            "up": true,
+            "code": 200,
+            "ms": 73.3
+        },
+        {
+            "name": "music",
+            "group": "comfort",
+            "role": "music",
+            "url": "https://music.example.net/",
+            "label": "music.example.net",
+            "auth": true,
+            "nav": true,
+            "alert": true,
+            "up": false,
+            "code": null,
+            "ms": null,
+            "error": "TimeoutError"
+        },
+        {
+            "name": "chat",
+            "group": "comfort",
+            "role": "local ai",
+            "url": "https://chat.example.net/",
+            "label": "chat.example.net",
+            "auth": true,
+            "nav": true,
+            "alert": true,
+            "up": false,
+            "code": 502,
+            "ms": null,
+            "error": "HTTPError"
+        },
+        {
+            "name": "logs",
+            "group": "",
+            "role": "logs",
+            "url": "http://127.0.0.1:3100/nginx-health",
+            "label": "logs.example.net:3100",
+            "auth": false,
+            "nav": false,
+            "alert": false,
+            "up": true,
+            "code": 200,
+            "ms": 2.9
+        }
+    ],
+    "hosts": {
+        "host-a": {
+            "up": true,
+            "ms": null,
+            "class": "critical"
+        },
+        "host-b": {
+            "up": true,
+            "ms": null,
+            "class": "critical"
+        },
+        "host-c": {
+            "up": true,
+            "ms": null,
+            "class": "critical"
+        },
+        "host-h": {
+            "up": true,
+            "ms": null,
+            "class": "critical"
+        },
+        "host-d": {
+            "up": true,
+            "ms": null,
+            "class": "critical"
+        },
+        "host-g": {
+            "up": true,
+            "ms": null,
+            "class": "watch"
+        },
+        "host-e": {
+            "up": false,
+            "ms": null,
+            "class": "watch",
+            "error": "HostUnreachable"
+        },
+        "host-f": {
+            "up": true,
+            "ms": null,
+            "class": "watch"
+        }
+    },
+    "nodes": {
+        "host-a": {
+            "load1": 1.42,
+            "mem_used": 0.58,
+            "disk_used": 0.41,
+            "temp_c": 44
+        },
+        "host-b": {
+            "load1": 0.31,
+            "mem_used": 0.44,
+            "disk_used": 0.22,
+            "temp_c": 39
+        },
+        "host-c": {
+            "load1": 0.87,
+            "mem_used": 0.67,
+            "disk_used": 0.71,
+            "temp_c": 47
+        }
+    },
+    "errors": {},
+    "tier_ms": {
+        "fast": 820,
+        "slow": 2140,
+        "lazy": 9630
+    },
+    "flux": {
+        "sources": {
+            "flux-system/flux-system": {
+                "namespace": "flux-system",
+                "name": "flux-system",
+                "interval": "1m",
+                "revision": "main@sha1:fe16a03b9c4d1e8a7f2b5c6d9e0a1b2c3d4e5f60",
+                "short": "fe16a03",
+                "artifact_at": "@now-95",
+                "ready": "True"
+            }
+        },
+        "kustomizations": [
+            {
+                "kind": "Kustomization",
+                "namespace": "flux-system",
+                "name": "apps",
+                "ready": "True",
+                "reason": "ReconciliationSucceeded",
+                "message": "",
+                "changed_at": "@now-180",
+                "suspended": false,
+                "interval": "10m",
+                "applied": "main@sha1:fe16a03b9c4d1e8a7f2b5c6d9e0a1b2c3d4e5f60",
+                "attempted": "main@sha1:fe16a03b9c4d1e8a7f2b5c6d9e0a1b2c3d4e5f60",
+                "path": "./k8s/apps",
+                "source": "flux-system/flux-system",
+                "source_revision": "main@sha1:fe16a03b9c4d1e8a7f2b5c6d9e0a1b2c3d4e5f60",
+                "partial": false,
+                "drifted": false,
+                "drift_age": null,
+                "stuck": false,
+                "history": [
+                    {
+                        "revision": "fe16a03",
+                        "status": "ReconciliationSucceeded",
+                        "at": "@iso-180",
+                        "duration": "4.2s",
+                        "count": 812
+                    }
+                ]
+            },
+            {
+                "kind": "Kustomization",
+                "namespace": "flux-system",
+                "name": "apps-config",
+                "ready": "True",
+                "reason": "ReconciliationSucceeded",
+                "message": "",
+                "changed_at": "@now-240",
+                "suspended": false,
+                "interval": "10m",
+                "applied": "main@sha1:0f9a8c8aa1b2c3d4e5f60718293a4b5c6d7e8f90",
+                "attempted": "main@sha1:fe16a03b9c4d1e8a7f2b5c6d9e0a1b2c3d4e5f60",
+                "path": "./k8s/apps-config",
+                "source": "flux-system/flux-system",
+                "source_revision": "main@sha1:fe16a03b9c4d1e8a7f2b5c6d9e0a1b2c3d4e5f60",
+                "partial": true,
+                "drifted": true,
+                "drift_age": 420,
+                "stuck": false,
+                "history": [
+                    {
+                        "revision": "0f9a8c8",
+                        "status": "ReconciliationSucceeded",
+                        "at": "@iso-420",
+                        "duration": "6.8s",
+                        "count": 540
+                    }
+                ]
+            },
+            {
+                "kind": "Kustomization",
+                "namespace": "flux-system",
+                "name": "infra",
+                "ready": "True",
+                "reason": "ReconciliationSucceeded",
+                "message": "",
+                "changed_at": "@now-300",
+                "suspended": false,
+                "interval": "10m",
+                "applied": "main@sha1:fe16a03b9c4d1e8a7f2b5c6d9e0a1b2c3d4e5f60",
+                "attempted": "main@sha1:fe16a03b9c4d1e8a7f2b5c6d9e0a1b2c3d4e5f60",
+                "path": "./k8s/infra",
+                "source": "flux-system/flux-system",
+                "source_revision": "main@sha1:fe16a03b9c4d1e8a7f2b5c6d9e0a1b2c3d4e5f60",
+                "partial": false,
+                "drifted": false,
+                "drift_age": null,
+                "stuck": false,
+                "history": [
+                    {
+                        "revision": "fe16a03",
+                        "status": "ReconciliationSucceeded",
+                        "at": "@iso-300",
+                        "duration": "2.1s",
+                        "count": 311
+                    }
+                ]
+            },
+            {
+                "kind": "Kustomization",
+                "namespace": "flux-system",
+                "name": "marketing-tool",
+                "ready": "True",
+                "reason": "ReconciliationSucceeded",
+                "message": "",
+                "changed_at": "@now-3600",
+                "suspended": true,
+                "interval": "10m",
+                "applied": "main@sha1:a1619ed112233445566778899aabbccddeeff001",
+                "attempted": "main@sha1:a1619ed112233445566778899aabbccddeeff001",
+                "path": "./k8s/apps/marketing-tool",
+                "source": "flux-system/flux-system",
+                "source_revision": "main@sha1:fe16a03b9c4d1e8a7f2b5c6d9e0a1b2c3d4e5f60",
+                "partial": false,
+                "drifted": false,
+                "drift_age": null,
+                "stuck": false,
+                "history": [
+                    {
+                        "revision": "a1619ed",
+                        "status": "ReconciliationSucceeded",
+                        "at": "@iso-3600",
+                        "duration": "1.4s",
+                        "count": 96
+                    }
+                ]
+            }
+        ],
+        "helmreleases": [
+            {
+                "kind": "HelmRelease",
+                "namespace": "monitoring",
+                "name": "metrics-stack",
+                "ready": "True",
+                "reason": "InstallSucceeded",
+                "message": "",
+                "changed_at": "@now-7200",
+                "suspended": false,
+                "interval": "30m",
+                "applied": "",
+                "attempted": "",
+                "chart": "metrics-stack",
+                "wanted": "66.2.1",
+                "version": "66.2.1",
+                "release": 14,
+                "action": "upgrade",
+                "failures": 0,
+                "upgrade_failures": 0,
+                "history": [
+                    {
+                        "revision": "66.2.1",
+                        "status": "deployed",
+                        "at": "@iso-7200",
+                        "duration": "",
+                        "count": 14
+                    }
+                ]
+            },
+            {
+                "kind": "HelmRelease",
+                "namespace": "monitoring",
+                "name": "logs",
+                "ready": "False",
+                "reason": "UpgradeFailed",
+                "message": "Helm upgrade failed for release monitoring/logs: timed out waiting for the condition",
+                "changed_at": "@now-5400",
+                "suspended": false,
+                "interval": "30m",
+                "applied": "",
+                "attempted": "",
+                "chart": "logs",
+                "wanted": "6.24.0",
+                "version": "6.21.0",
+                "release": 7,
+                "action": "upgrade",
+                "failures": 1,
+                "upgrade_failures": 2,
+                "history": [
+                    {
+                        "revision": "6.21.0",
+                        "status": "deployed",
+                        "at": "@iso-5400",
+                        "duration": "",
+                        "count": 7
+                    }
+                ]
+            },
+            {
+                "kind": "HelmRelease",
+                "namespace": "sso",
+                "name": "sso",
+                "ready": "True",
+                "reason": "UpgradeSucceeded",
+                "message": "",
+                "changed_at": "@now-86400",
+                "suspended": false,
+                "interval": "30m",
+                "applied": "",
+                "attempted": "",
+                "chart": "sso",
+                "wanted": "2026.8.2",
+                "version": "2026.8.2",
+                "release": 22,
+                "action": "upgrade",
+                "failures": 0,
+                "upgrade_failures": 0,
+                "history": [
+                    {
+                        "revision": "2026.8.2",
+                        "status": "deployed",
+                        "at": "@iso-86400",
+                        "duration": "",
+                        "count": 22
+                    }
+                ]
+            },
+            {
+                "kind": "HelmRelease",
+                "namespace": "ingress",
+                "name": "ingress",
+                "ready": "True",
+                "reason": "UpgradeSucceeded",
+                "message": "",
+                "changed_at": "@now-172800",
+                "suspended": false,
+                "interval": "30m",
+                "applied": "",
+                "attempted": "",
+                "chart": "ingress",
+                "wanted": "4.12.1",
+                "version": "4.12.1",
+                "release": 9,
+                "action": "upgrade",
+                "failures": 0,
+                "upgrade_failures": 0,
+                "history": [
+                    {
+                        "revision": "4.12.1",
+                        "status": "deployed",
+                        "at": "@iso-172800",
+                        "duration": "",
+                        "count": 9
+                    }
+                ]
+            }
+        ],
+        "timeline": [
+            {
+                "revision": "fe16a03",
+                "at": "@iso-180",
+                "status": "ReconciliationSucceeded",
+                "resources": ["apps", "infra"],
+                "duration": 6.3
+            },
+            {
+                "revision": "0f9a8c8",
+                "at": "@iso-420",
+                "status": "ReconciliationSucceeded",
+                "resources": ["apps-config"],
+                "duration": 6.8
+            },
+            {
+                "revision": "a1619ed",
+                "at": "@iso-3600",
+                "status": "ReconciliationSucceeded",
+                "resources": ["marketing-tool"],
+                "duration": 1.4
+            }
+        ],
+        "drift": {
+            "revision": "main@sha1:fe16a03b9c4d1e8a7f2b5c6d9e0a1b2c3d4e5f60",
+            "pending": ["apps-config"],
+            "stuck": false,
+            "in_sync": false
+        },
+        "counts": {
+            "total": 8,
+            "failing": 1,
+            "suspended": 1,
+            "drifted": 1
+        }
+    },
+    "cluster": {
+        "nodes": [
+            {
+                "name": "host-a",
+                "ready": true,
+                "pressure": [],
+                "cordoned": false,
+                "kubelet": "v1.34.1"
+            },
+            {
+                "name": "host-b",
+                "ready": true,
+                "pressure": [],
+                "cordoned": false,
+                "kubelet": "v1.34.1"
+            },
+            {
+                "name": "host-c",
+                "ready": true,
+                "pressure": ["disk"],
+                "cordoned": false,
+                "kubelet": "v1.34.1"
+            }
+        ],
+        "pods": [
+            {
+                "namespace": "monitoring",
+                "name": "logs-0",
+                "phase": "NotReady",
+                "reason": "CrashLoopBackOff",
+                "restarts": 14,
+                "node": "host-a"
+            },
+            {
+                "namespace": "media",
+                "name": "transcoder-7c9f4d8b6-2xqzt",
+                "phase": "Pending",
+                "reason": "Unschedulable",
+                "restarts": 0,
+                "node": ""
+            },
+            {
+                "namespace": "photos",
+                "name": "photos-indexer-0",
+                "phase": "NotReady",
+                "reason": "",
+                "restarts": 2,
+                "node": "host-c"
+            }
+        ],
+        "restarting": [
+            {
+                "namespace": "monitoring",
+                "name": "logs-0",
+                "restarts": 14,
+                "node": "host-a"
+            },
+            {
+                "namespace": "media",
+                "name": "thumbnailer-5d8c7b9f4-nx8kv",
+                "restarts": 11,
+                "node": "host-a"
+            }
+        ],
+        "pod_count": 118
+    },
+    "workloads": {
+        "degraded": [
+            {
+                "kind": "StatefulSet",
+                "namespace": "monitoring",
+                "name": "logs",
+                "ready": 0,
+                "desired": 1
+            },
+            {
+                "kind": "Deployment",
+                "namespace": "media",
+                "name": "transcoder",
+                "ready": 0,
+                "desired": 1
+            },
+            {
+                "kind": "Deployment",
+                "namespace": "photos",
+                "name": "photos-indexer",
+                "ready": 1,
+                "desired": 2
+            }
+        ],
+        "counts": {
+            "Deployment": {
+                "ready": 31,
+                "total": 33
+            },
+            "StatefulSet": {
+                "ready": 8,
+                "total": 9
+            },
+            "DaemonSet": {
+                "ready": 6,
+                "total": 6
+            }
+        },
+        "events": [
+            {
+                "namespace": "media",
+                "object": "Pod/transcoder-7c9f4d8b6-2xqzt",
+                "reason": "FailedScheduling",
+                "message": "0/3 nodes are available: 1 Insufficient memory, 2 node(s) didn't match Pod's node affinity/selector",
+                "stamp": "@iso-120",
+                "count": 7
+            },
+            {
+                "namespace": "monitoring",
+                "object": "Pod/logs-0",
+                "reason": "BackOff",
+                "message": "Back-off restarting failed container logs in pod logs-0_monitoring",
+                "stamp": "@iso-300",
+                "count": 14
+            },
+            {
+                "namespace": "photos",
+                "object": "StatefulSet/photos-indexer",
+                "reason": "FailedCreate",
+                "message": "create Pod photos-indexer-1 in StatefulSet photos-indexer failed error: pods is forbidden",
+                "stamp": "@iso-900",
+                "count": 3
+            }
+        ]
+    },
+    "alerts": {
+        "active": [
+            {
+                "alertname": "KubePodCrashLooping",
+                "severity": "critical",
+                "state": "active",
+                "namespace": "monitoring",
+                "target": "logs-0"
+            },
+            {
+                "alertname": "KubePodNotReady",
+                "severity": "warning",
+                "state": "active",
+                "namespace": "media",
+                "target": "transcoder-7c9f4d8b6-2xqzt"
+            },
+            {
+                "alertname": "NodeFilesystemAlmostOutOfSpace",
+                "severity": "warning",
+                "state": "active",
+                "namespace": "",
+                "target": "host-c"
+            }
+        ],
+        "suppressed": 4
+    },
+    "backups": {
+        "repo": {
+            "snapshots": 412,
+            "size": 1038073889587,
+            "ratio": 1.34
+        },
+        "groups": [
+            {
+                "host": "host-c",
+                "paths": [
+                    "/srv/data/files/html",
+                    "/srv/data/files/dumps",
+                    "/srv/data/important"
+                ],
+                "age_hours": 6.2,
+                "short_id": "a1f9c3d2",
+                "id": "host-c|/srv/data/files/dumps,/srv/data/files/html,/srv/data/important"
+            },
+            {
+                "host": "host-a",
+                "paths": ["/var/lib/cluster/storage", "/var/lib/cluster-dumps"],
+                "age_hours": 41.4,
+                "short_id": "7b2e8d14",
+                "id": "host-a|/var/lib/cluster-dumps,/var/lib/cluster/storage"
+            },
+            {
+                "host": "host-b",
+                "paths": ["/var/lib/cluster/storage", "/var/lib/cluster-dumps"],
+                "age_hours": 80.9,
+                "short_id": "c4d50a66",
+                "id": "host-b|/var/lib/cluster-dumps,/var/lib/cluster/storage"
+            }
+        ],
+        "units": [
+            {
+                "host": "host-c",
+                "unit": "restic-backups-files.service",
+                "lines": 28,
+                "fails": 0,
+                "ok": true
+            },
+            {
+                "host": "host-a",
+                "unit": "restic-backups-cluster.service",
+                "lines": 21,
+                "fails": 0,
+                "ok": true
+            },
+            {
+                "host": "host-b",
+                "unit": "restic-backups-cluster.service",
+                "lines": 19,
+                "fails": 3,
+                "ok": false
+            },
+            {
+                "host": "host-d",
+                "unit": "restic-retention.service",
+                "lines": 7,
+                "fails": 0,
+                "ok": true
+            }
+        ],
+        "display": {
+            "age_hours": 6.2,
+            "host": "host-c"
+        }
+    },
+    "disks": {
+        "host-a": {
+            "fails": 0,
+            "ok": true
+        },
+        "host-b": {
+            "fails": 0,
+            "ok": true
+        },
+        "host-c": {
+            "fails": 2,
+            "ok": false
+        },
+        "host-d": {
+            "fails": 0,
+            "ok": true
+        },
+        "host-e": {
+            "fails": 0,
+            "ok": true
+        }
+    }
+}

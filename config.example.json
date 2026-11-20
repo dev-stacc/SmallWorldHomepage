@@ -1,0 +1,154 @@
+{
+    "links": [
+        {
+            "name": "metrics",
+            "url": "https://metrics.example.net/",
+            "label": "metrics.example.net",
+            "role": "dashboards",
+            "group": "monitoring",
+            "auth": true,
+            "nav": true
+        },
+        {
+            "name": "sso",
+            "url": "https://sso.example.net/",
+            "label": "sso.example.net",
+            "role": "login",
+            "group": "identity",
+            "auth": false,
+            "nav": true
+        },
+        {
+            "name": "secrets",
+            "url": "https://secrets.example.net/",
+            "label": "secrets.example.net",
+            "role": "secrets",
+            "group": "identity",
+            "auth": false,
+            "nav": true
+        },
+        {
+            "name": "files",
+            "url": "https://files.example.net/",
+            "label": "files.example.net",
+            "role": "storage",
+            "group": "identity",
+            "auth": false,
+            "nav": true
+        },
+        {
+            "name": "photos",
+            "url": "https://photos.example.net/",
+            "label": "photos.example.net",
+            "role": "photos",
+            "group": "identity",
+            "auth": false,
+            "nav": true
+        },
+        {
+            "name": "search",
+            "url": "https://search.example.net/",
+            "label": "search.example.net",
+            "role": "search",
+            "group": "comfort",
+            "auth": false,
+            "nav": true
+        },
+        {
+            "name": "git",
+            "url": "https://git.example.net/",
+            "label": "git.example.net",
+            "role": "repositories",
+            "group": "comfort",
+            "auth": false,
+            "nav": true
+        },
+        {
+            "name": "dns",
+            "url": "https://dns.example.net/admin",
+            "label": "dns.example.net/admin",
+            "role": "dns",
+            "group": "comfort",
+            "auth": false,
+            "nav": true
+        },
+        {
+            "name": "media",
+            "url": "https://media.example.net/",
+            "label": "media.example.net",
+            "role": "streaming",
+            "group": "comfort",
+            "auth": true,
+            "nav": true
+        },
+        {
+            "name": "music",
+            "url": "https://music.example.net/",
+            "label": "music.example.net",
+            "role": "music",
+            "group": "comfort",
+            "auth": true,
+            "nav": true
+        },
+        {
+            "name": "chat",
+            "url": "https://chat.example.net/",
+            "label": "chat.example.net",
+            "role": "local ai",
+            "group": "comfort",
+            "auth": true,
+            "nav": true
+        }
+    ],
+    "expectedBackups": [
+        {
+            "host": "host-c",
+            "paths": [
+                "/srv/data/files/html",
+                "/srv/data/files/dumps",
+                "/srv/data/important"
+            ]
+        },
+        {
+            "host": "host-a",
+            "paths": ["/var/lib/cluster/storage", "/var/lib/cluster-dumps"]
+        },
+        {
+            "host": "host-b",
+            "paths": ["/var/lib/cluster/storage", "/var/lib/cluster-dumps"]
+        },
+        {
+            "host": "host-c",
+            "paths": ["/var/lib/cluster/storage", "/var/lib/cluster-dumps"]
+        }
+    ],
+    "backupStaleHours": 36,
+    "agents": [
+        {
+            "host": "host-a",
+            "url": "http://127.0.0.1:9851",
+            "priority": "critical"
+        },
+        {
+            "host": "host-b",
+            "url": "http://127.0.0.1:9852",
+            "priority": "critical"
+        },
+        {
+            "host": "host-c",
+            "url": "http://127.0.0.1:9853",
+            "priority": "critical"
+        },
+        {
+            "host": "host-d",
+            "url": "http://127.0.0.1:9854",
+            "priority": "critical"
+        },
+        {
+            "host": "host-e",
+            "url": "http://127.0.0.1:9855",
+            "priority": "watch"
+        }
+    ],
+    "resticRepo": "backup-host:/srv/backups"
+}
